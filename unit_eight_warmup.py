@@ -7,6 +7,7 @@ fer = tkinter.StringVar()
 
 cel = tkinter.StringVar()
 
+fer.set("0")
 
 def f_to_c():
     fer_temp = int(fer.get())
@@ -24,9 +25,9 @@ degree_c = tkinter.Label(root, text="degrees C:")
 degree_c.grid(row=2, column=1)
 
 c_answer = tkinter.Label(root, textvariable=cel)
-c_answer.grid(row=2, column=2)
+c_answer.grid(row=2, column=2, sticky="W")
 
 convert_button = tkinter.Button(root, text="convert", command=f_to_c)
-convert_button.grid(row=3, column=1)
+convert_button.grid(row=3, column=1, columnspan=2)
 
 root.mainloop()
