@@ -91,9 +91,9 @@ def div():
 
 
 def exp():
-    old_number = answer.get()
-    new_number = old_number + "**"
-    answer.set(new_number)
+    old_number = float(answer.get())
+    new_number = old_number ** 2
+    answer.set(str(new_number))
 
 
 def sqrt():
@@ -112,64 +112,61 @@ def enter():
     answer.set(new)
 
 
-title_label = tkinter.Label(root, text="Calculator", font="helvetica 16 bold")
-title_label.grid(row=0, column=2,)
-
-answer_entry = tkinter.Entry(root, textvariable=answer)
+answer_entry = tkinter.Entry(root, textvariable=answer, bg="orange1")
 answer_entry.grid(row=1, column=0, columnspan=5, ipadx=35)
 
-nine_button = tkinter.Button(root, text="9", command=nine)
-nine_button.grid(row=2, column=2, sticky="W", ipadx=5, ipady=3)
+nine_button = tkinter.Button(root, text="9", command=nine, fg="chocolate1")
+nine_button.grid(row=2, column=2, sticky="N,E,S,W", ipadx=5, ipady=3)
 
-eight_button = tkinter.Button(root, text="8", command=eight)
-eight_button.grid(row=2, column=1, ipadx=5, ipady=3)
+eight_button = tkinter.Button(root, text="8", command=eight, fg="chocolate1")
+eight_button.grid(row=2, column=1, sticky="N,E,S,W")
 
-seven_button = tkinter.Button(root, text="7", command=seven)
-seven_button.grid(row=2, column=0, sticky="E", ipadx=5, ipady=3)
+seven_button = tkinter.Button(root, text="7", command=seven, fg="chocolate1")
+seven_button.grid(row=2, column=0, sticky="N,E,S,W", ipadx=5, ipady=3)
 
-six_button = tkinter.Button(root, text="6", command=six)
-six_button.grid(row=3, column=2, sticky="W", ipadx=5, ipady=3)
+six_button = tkinter.Button(root, text="6", command=six, fg="chocolate1")
+six_button.grid(row=3, column=2, sticky="N,E,S,W", ipadx=5, ipady=3)
 
-five_button = tkinter.Button(root, text="5", command=five)
-five_button.grid(row=3, column=1, ipadx=5, ipady=3)
+five_button = tkinter.Button(root, text="5", command=five, fg="chocolate1")
+five_button.grid(row=3, column=1, ipadx=5, ipady=3, sticky="N,E,S,W")
 
-four_button = tkinter.Button(root, text="4", command=four)
-four_button.grid(row=3, column=0, sticky="E", ipadx=5, ipady=3)
+four_button = tkinter.Button(root, text="4", command=four, fg="chocolate1")
+four_button.grid(row=3, column=0, ipadx=5, ipady=3, sticky="N,E,S,W")
 
-three_button = tkinter.Button(root, text="3", command=three)
-three_button.grid(row=4, column=2, sticky="W", ipadx=5, ipady=3)
+three_button = tkinter.Button(root, text="3", command=three, fg="chocolate1")
+three_button.grid(row=4, column=2, ipadx=5, ipady=3, sticky="N,E,S,W")
 
-two_button = tkinter.Button(root, text="2", command=two)
-two_button.grid(row=4, column=1, ipadx=5, ipady=3)
+two_button = tkinter.Button(root, text="2", command=two, fg="chocolate1")
+two_button.grid(row=4, column=1, ipadx=5, ipady=3, sticky="N,E,S,W")
 
-one_button = tkinter.Button(root, text="1", command=one)
-one_button.grid(row=4, column=0, ipadx=5, ipady=3, sticky="E")
+one_button = tkinter.Button(root, text="1", command=one, fg="chocolate1")
+one_button.grid(row=4, column=0, ipadx=5, ipady=3, sticky="N,E,S,W")
 
-zero_button = tkinter.Button(root, text="0", command=zero)
-zero_button.grid(row=5, column=0, ipadx=35, ipady=3, columnspan=3, sticky="W")
+zero_button = tkinter.Button(root, text="0", command=zero, fg="chocolate1")
+zero_button.grid(row=5, column=0, ipadx=62, ipady=3, columnspan=3)
 
-plus_button = tkinter.Button(root, text="+", command=plus)
-plus_button.grid(row=2, column=3, ipadx=16, ipady=3, sticky="E")
+plus_button = tkinter.Button(root, text="+", command=plus, fg="chocolate1")
+plus_button.grid(row=2, column=3, sticky="N,E,S,W")
 
-minus_button = tkinter.Button(root, text="-", command=minus)
-minus_button.grid(row=2, column=4, ipadx=16, ipady=3, sticky="W")
+minus_button = tkinter.Button(root, text="-", command=minus, fg="chocolate1")
+minus_button.grid(row=2, column=4, sticky="N,E,S,W")
 
-mult_button = tkinter.Button(root, text="x", command=mult)
-mult_button.grid(row=3, column=3, ipadx=16, ipady=3, sticky="E")
+mult_button = tkinter.Button(root, text="x", command=mult, fg="chocolate1")
+mult_button.grid(row=3, column=3, sticky="N,E,S,W")
 
-div_button = tkinter.Button(root, text="/", command=div)
-div_button.grid(row=3, column=4, ipadx=17, ipady=3, sticky="W")
+div_button = tkinter.Button(root, text="/", command=div, fg="chocolate1")
+div_button.grid(row=3, column=4, sticky="N,E,S,W")
 
-exp_button = tkinter.Button(root, text="x^2", command=exp)
-exp_button.grid(row=4, column=3, ipadx=9, ipady=3, sticky="E")
+exp_button = tkinter.Button(root, text="x^2", command=exp, fg="chocolate1")
+exp_button.grid(row=4, column=3, sticky="N,E,S,W")
 
-sqrt_button = tkinter.Button(root, text="√", command=sqrt)
-sqrt_button.grid(row=4, column=4, ipadx=14, ipady=3, sticky="W")
+sqrt_button = tkinter.Button(root, text="√", command=sqrt, fg="chocolate1")
+sqrt_button.grid(row=4, column=4, sticky="N,E,S,W")
 
-clear_button = tkinter.Button(root, text="Clear", command=clear)
-clear_button.grid(row=5, column=3, ipadx=3, ipady=3, sticky="E")
+clear_button = tkinter.Button(root, text="Clear", command=clear, fg="firebrick1")
+clear_button.grid(row=5, column=3, sticky="N,E,S,W")
 
-enter_button = tkinter.Button(root, text="Enter", command=enter)
-enter_button.grid(row=5, column=4, ipadx=3, ipady=3, sticky="W")
+enter_button = tkinter.Button(root, text="Enter", command=enter, fg="firebrick1")
+enter_button.grid(row=5, column=4, sticky="N,E,S,W")
 
 root.mainloop()
