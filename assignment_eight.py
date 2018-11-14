@@ -7,106 +7,178 @@ answer = tkinter.StringVar()
 
 
 def nine():
+    """
+    adds 9 to the entry field
+    :return: none
+    """
     old_number = answer.get()
     new_number = old_number + "9"
     answer.set(new_number)
 
 
 def eight():
+    """
+        adds 8 to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "8"
     answer.set(new_number)
 
 
 def seven():
+    """
+        adds 7 to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "7"
     answer.set(new_number)
 
 
 def six():
+    """
+        adds 6 to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "6"
     answer.set(new_number)
 
 
 def five():
+    """
+        adds 5 to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "5"
     answer.set(new_number)
 
 
 def four():
+    """
+        adds 4 to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "4"
     answer.set(new_number)
 
 
 def three():
+    """
+        adds 3 to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "3"
     answer.set(new_number)
 
 
 def two():
+    """
+        adds 2 to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "2"
     answer.set(new_number)
 
 
 def one():
+    """
+        adds 1 to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "1"
     answer.set(new_number)
 
 
 def zero():
+    """
+        adds 0 to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "0"
     answer.set(new_number)
 
 
 def plus():
+    """
+        adds + to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "+"
     answer.set(new_number)
 
 
 def minus():
+    """
+        adds - to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "-"
     answer.set(new_number)
 
 
 def mult():
+    """
+        adds * to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "*"
     answer.set(new_number)
 
 
 def div():
+    """
+        adds * to the entry field
+        :return: none
+        """
     old_number = answer.get()
     new_number = old_number + "/"
     answer.set(new_number)
 
 
 def exp():
+    """
+    raises the previous number in the entry field to the power of 2
+    :return: none
+    """
     old_number = float(answer.get())
     new_number = old_number ** 2
     answer.set(str(new_number))
 
 
 def sqrt():
+    """
+    raises the previous number in the entry field to the power of .5
+    :return: none
+    """
     old_number = float(answer.get())
     new_number = old_number ** .5
     answer.set(str(new_number))
 
 
 def clear():
+    """
+    sets entry field to nothing
+    :return: none
+    """
     answer.set("")
 
 
 def enter():
+    """
+    evaluates the string in the entry field 
+    :return: none
+    """
     equation = answer.get()
     new = eval(equation)
     answer.set(new)
